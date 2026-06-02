@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="todo-app">
+        <h1 class="app-title">Todo List</h1>
+
+        <!-- 날짜 이동 -->
+        <div class="date-navigation">
+            <button id="previous-date-button" class="date-button">◀</button>
+            <h2 id="current-date" class="current-date"></h2>
+            <button id="next-date-button" class="date-button">▶</button>
+        </div>
+
+        <!-- 입력창 -->
+        <div class="todo-input-container">
+            <input type="text" id="todo-input" class="todo-input" placeholder="할 일을 입력하세요">
+            <button id="add-todo-button" class="add-button">추가</button>
+        </div>
+
+        <!-- 사용자 안내 메시지 -->
+        <p id="message" class="message"></p>
+
+        <!-- 필터 (전체 / 진행 중 / 완료) -->
+        <div class="filter-container">
+            <button id="all-filter-button" class="filter-button active" data-filter="all">전체</button>
+            <button id="active-filter-button"class="filter-button" data-filter="active">진행 중</button>
+            <button id="completed-filter-button" class="filter-button" data-filter="completed">완료</button>
+        </div>
+
+        <!-- Todo 목록 -->
+        <ul id="todo-list" class="todo-list"></ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

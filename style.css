@@ -1,0 +1,180 @@
+/* 초기화 및 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f5f6fa;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.app-title {
+    text-align: center;
+    color: #672be0;
+    margin-bottom: 24px;
+}
+
+/* Todo 입력 및 추가 */
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.todo-input:focus {
+    border-color: #672be0;
+}
+
+.add-button {
+    border: none;
+    background-color: #672be0;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    opacity: 0.9;
+}
+
+.message {
+    margin-top: 12px;
+    min-height: 20px;
+    color: #e74c3c;
+    font-size: 14px;
+}
+
+/* Todo 리스트 */
+.todo-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.todo-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* 완료된 Todo */
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.complete-button {
+    background-color: #672be0;
+}
+
+.edit-button {
+    background-color: #3498db;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* 필터 */
+.filter-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filter-button {
+    flex: 1;
+    border: 1px solid #672be0;
+    background: white;
+    color: #672be0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-button.active {
+    background-color: #672be0;
+    color: white;
+}
+
+/* 일간 뷰 */
+.date-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+}
+
+.current-date {
+    color: #672be0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date-button {
+    border: none;
+    background-color: #672be0;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.date-button:hover {
+    opacity: 0.9;
+}
